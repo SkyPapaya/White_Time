@@ -3,11 +3,13 @@ package service;
 import model.Song;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
-public class Impl implements SongService {
+public class SongServiceImpl implements SongService {
 
    static Map<String,Song> songs = new HashMap();
 
@@ -24,5 +26,12 @@ public class Impl implements SongService {
     public Song get(String id) {
         return songs.get(id);
 
+    }
+
+    @Override
+    public List<Song> list(String subjectId) {
+        List<Song> songs = new ArrayList<>();
+        
+        return null;
     }
 }
